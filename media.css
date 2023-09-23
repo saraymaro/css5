@@ -1,0 +1,21 @@
+html{
+    background-color: aqua;
+}
+div{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    background-color: coral;
+    font-size: 35px;
+}
+@media (width < 600px){
+    html{
+        background-color: yellowgreen;
+    }
+}
+@media (height <300px){
+    div{
+        background-color: crimson;
+        color: white;
+    }
+}
