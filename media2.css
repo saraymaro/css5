@@ -1,62 +1,66 @@
-.header{
-    background-color: khaki;
-    display: flex;
-    justify-content: space-around;
-}
-.section{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: space-around;
-}
-.footer{
-    background-color: darkgray;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.box{
-    width: 550px;
-    height: 150px;
+.orange{
     background-color: orange;
-    border: 1px solid black;
+    height: 50px;
+    margin: 0.75%;
 }
-.sec{
-    width: 300px;
-    height: 250px;
-    background-color: darkcyan;
-    border: 1px solid black;
+.yellow{
+    background-color: yellow;
+    height: 150px;
+    margin: 0.75%;
 }
-.foot{
-    width: 200px;
-    height: 200px;
-    background-color: lightgray;
-    border: 1px solid black;
+.blue{
+    background-color: lightskyblue;
+    height: 80px;
+    margin: 0.75%;
+    display: flex;
 }
+.grey{
+    background-color: lightslategrey;
+    height: 80px;
+    margin: 0.75%;
+}
+/*PC's tamaño + 1024px*/
+@media (width > 1024px) {
+    .orange{
+        width: 47.5%;
+        display: inline-block;
+    }
+    & .yellow{
+        height: 300px;
+    }
+    & .blue{
+        width: 31.1%;
+        display: inline-block;
+    }
+    & .grey{
+        width: 20.5%;
+        display: inline-block;
+    }
+}
+/*Tablets tamaño 768px*/
+@media (width > 320px) and (width < 1024px){
+    .orange{
+        width: auto;
+    }
+    & .grey{
+        width: 48%;
+        display: inline-block;
+    }
+}
+/*Movil tamaño 320px*/
 @media (width < 320px){
-    .header, .section, .footer{
-        display: flex;
-        flex-direction: column;
+    .orange{
+        width: auto;
     }
-}
-@media (width < 768px){
-    .header, .section{
-        display: flex;
-        flex-direction: column;
+    & .yellow{
+        width: auto;
     }
-    .box{
-        width: 768px;
-        height: 100px;
+    & .blue{
+        width: auto;
+        height: 120px;
     }
-    .sec{
-        width: 768px;
-        height: 150px;
-    }
-    .footer{
-        display: flex;
-        flex-direction: row;
-    }
-    .foot{
-        width: 300px;
-        height: 100px;
+    & .grey{
+        width: auto;
+        height: 50px;
     }
 }
